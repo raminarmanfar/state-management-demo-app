@@ -6,8 +6,8 @@
     </div>
   </div>
   <div class="btn-container">
-  <button mat-raised-button color="primary" class="btn">Send using NGXS</button>
+  <button mat-raised-button color="primary" class="btn" (click)="onNgxsClick()">Send using NGXS</button>
   <button mat-raised-button color="accent" class="btn">Send with traditional approach</button>
   </div>
-  <h1>Customer Email: {{customerEmail}}</h1>
+  <h1>Customer Email: {{demoStateService.email$ | async}}</h1>
 </div>

@@ -1,4 +1,7 @@
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
+import {DemoStateService} from "./state-management/demo-state.service";
+import {Store} from "@ngxs/store";
+import {SetCustomerEmail} from "./state-management/demo.action";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,10 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  @Input() customerEmail = '';
+  constructor(public demoStateService: DemoStateService, private store: Store) {
+  }
+
+  onNgxsClick(): void {
+    this.store.dispatch(new SetCustomerEmail('ramin.armanfar@gmail.com'));
+  }
 }

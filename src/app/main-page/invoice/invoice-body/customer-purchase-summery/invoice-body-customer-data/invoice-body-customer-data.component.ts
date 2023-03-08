@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {DemoStateService} from "../../../../../state-management/demo-state.service";
 
 @Component({
   selector: 'app-invoice-body-customer-data',
@@ -6,6 +7,7 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./invoice-body-customer-data.component.scss']
 })
 export class InvoiceBodyCustomerDataComponent {
-  @Input() customerEmail = '';
+  constructor(public demoStateService: DemoStateService) {
+  }
 
 }
