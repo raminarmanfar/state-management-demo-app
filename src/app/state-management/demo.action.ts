@@ -3,3 +3,7 @@ export class SetCustomerEmail {
   constructor(public payload: string) {
   }
 }
+
+export class GetInvoice {
+  static readonly type = '[INVOICE] Get Customer Invoice From the Server';
+}

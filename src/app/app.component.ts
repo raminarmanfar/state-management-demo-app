@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {DemoStateService} from "./state-management/demo-state.service";
 import {Store} from "@ngxs/store";
-import {SetCustomerEmail} from "./state-management/demo.action";
+import {GetInvoice} from './state-management/demo.action';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +13,6 @@ export class AppComponent {
   }
 
   onNgxsClick(): void {
-    this.store.dispatch(new SetCustomerEmail('ramin.armanfar@gmail.com'));
+    this.store.dispatch(new GetInvoice());
   }
 }
